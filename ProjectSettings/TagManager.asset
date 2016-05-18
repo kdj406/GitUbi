@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - PHOTON
+  - EnterBtn
+  - TurnoffBtn
+  - chbase
+  - StepperBtn
+  - BackBtn
+  - ResetBtn
   layers:
   - Default
   - TransparentFX

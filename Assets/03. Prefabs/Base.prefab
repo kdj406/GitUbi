@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3310692}
   - 65: {fileID: 6593050}
   - 23: {fileID: 2380264}
-  - 114: {fileID: 11433148}
+  - 114: {fileID: 11459214}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -76,7 +76,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11433148
+--- !u!114 &11459214
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 187070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2dc6582d8727f488ae42a6259af4d2, type: 3}
+  m_Script: {fileID: 11500000, guid: c025880f489218a4cb0ad23326d96ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

@@ -1,30 +1,38 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+
+public class MaskBtnCtrl : MonoBehaviour {
+    private bool isClicked;
+
+    private Button button;
+    private ColorBlock color;
 
 
-public class GUITest : MonoBehaviour {
-
-    public GameObject UIMask;
-
-    public static List<int> selectedButtons;
-
-    private int k = 0;
-
+    // Use this for initialization
     void Start() {
+        isClicked = false;
 
-        selectedButtons = new List<int>();
-        GameObject panel = transform.FindChild("Panel").gameObject;
-        Vector3 panelPosition = panel.GetComponent<Transform>().position;
-        for (float i = -4.5f; i < 5; i++) {
-            for (float j = -4.5f; j < 5; j++) {
-                GameObject obj =
-                    Instantiate(UIMask, panelPosition + new Vector3(25 * i, 25 * j), Quaternion.identity) as GameObject;
-                obj.name = k + "";
-                obj.transform.SetParent(panel.transform);
-                k++;
-            }
+        button = gameObject.GetComponent<Button>();
+        color = button.colors;
 
-        }
+        //GameObject UIManager = GameObject.Find("UIManager");
+        //gameObject.GetComponent<Button>().onClick.AddListener(() => UIManager.GetComponent<UIMgr>().onButtonClicked(gameObject));
+    }
+
+    public void ChangeColor() {
+        color.normalColor = Color.white;
+        button.colors = color;
+    }
+
+
+    public bool getIsClicked() {
+        return isClicked;
+    }
+
+    public bool setIsClicked(bool boolean) {
+        isClicked = boolean;
+        return isClicked;
     }
 }

@@ -21,13 +21,13 @@ public class CreateMask : MonoBehaviour {
 
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                GameObject obj = Instantiate(Maska, new Vector3(-67.5f + 5 * i, 5, -22.5f + 5 * j),
+                GameObject obj = Instantiate(Maskb, new Vector3(-67.5f + 5 * i, 5, -22.5f + 5 * j),
                         Quaternion.identity) as GameObject;
                 obj.transform.parent = transform.FindChild("MaskA").transform;
                 k++;
                 Masks[10 * i + j] = obj;
                 /*
-                if (GUITest.selectedButtons.Contains(k)) {
+                if (CreateMaskBtn.selectedButtons.Contains(k)) {
                     GameObject obj = Instantiate(Maska, new Vector3(-67.5f + 5 * i, 5, -22.5f + 5 * j),
                         Quaternion.identity) as GameObject;
                     obj.transform.parent = transform.FindChild("MaskA").transform;
