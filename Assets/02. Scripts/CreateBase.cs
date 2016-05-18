@@ -7,6 +7,12 @@ public class CreateBase : MonoBehaviour {
 
     public static GameObject[] Bases;
 
+    private bool movingFlag;
+
+    void Awake() {
+        movingFlag = true;
+    }
+
 	// Use this for initialization
 	void Start () {
 
@@ -21,9 +27,24 @@ public class CreateBase : MonoBehaviour {
             }
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+        if (movingFlag) {
+            for (int i = 0; i < 10; i++) {
+                for (int j = 0; j < 10; j++) {
+                    Bases[10 * i + j].GetComponent<Transform>().Translate(Vector3.left * 0.5f);
+                }
+
+            }
+        }
+        if (Bases[99].GetComponent<Transform>().position.x == 22.5f) {
+            movingFlag = false;
+        }
+    }
+
+    public bool getmovingFlag() {
+        return movingFlag;
+    }
 }
